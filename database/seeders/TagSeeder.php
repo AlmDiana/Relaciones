@@ -2,14 +2,14 @@
 
 namespace Database\Seeders;
 
-use App\Models\Group;
+use App\Models\Tag;
 use Illuminate\Database\Seeder;
 
-class GroupSeeder extends Seeder
+class TagSeeder extends Seeder
 {
 
     public function run()
     {
-        Group::factory()->count(3)->create();
+        Tag::factory()->count(5)->create();
     }
 }

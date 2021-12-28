@@ -2,19 +2,22 @@
 
 namespace Database\Factories;
 
+use App\Models\Video;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class VideoFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
+
+    protected $model = Video::class;
+
+
     public function definition()
     {
         return [
-            //
+            
+            'nombre'=> $this->faker->name,
+            'category_id'=> rand(1,4),
+            'user_id'=> rand(1,5)
         ];
     }
 }

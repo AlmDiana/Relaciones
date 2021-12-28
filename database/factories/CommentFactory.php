@@ -2,23 +2,22 @@
 
 namespace Database\Factories;
 
-use App\Models\Post;
+use App\Models\Comment;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PostFactory extends Factory
+class CommentFactory extends Factory
 {
 
-    protected $model = Post::class;
+    
+    protected $model = Comment::class;
 
 
+    
     public function definition()
     {
         return [
-            
-            'nombre'=> $this->faker->sentence,
-            'category_id'=> rand(1,4),
+            'detalle'=> $this->faker->sentence,
             'user_id'=> rand(1,5)
-        
         ];
     }
 }

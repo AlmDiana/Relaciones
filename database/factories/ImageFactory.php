@@ -2,20 +2,20 @@
 
 namespace Database\Factories;
 
-use App\Models\Category;
+use App\Models\Image;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CategoryFactory extends Factory
+class ImageFactory extends Factory
 {
 
-    protected $model = Category::class;
+    protected $model = Image::class;
 
 
     public function definition()
     {
         return [
             
-            'nombre'=> $this->faker->name
+            'url'=> $this->faker->imageUrl(640,480)
         ];
     }
 }
